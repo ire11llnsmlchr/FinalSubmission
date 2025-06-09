@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalle - Bocconi</title>
+  <link rel="stylesheet" href="detalle.css" />
+  <script defer src="detalle.js"></script>
+</head>
+<body>
+  <div class="detalle-container">
+    <aside class="descripcion">
+      <h2>Bocconi</h2>
+      <p>
+        The Bocconi building stands out for its contemporary architecture and functional design. Its structure combines clean geometric shapes and straight lines, creating a balance between solidity and transparency. The façade features large windows that allow abundant natural light, while the use of modern materials like glass and concrete reinforces its image of academic innovation. Additionally, the play of volumes and shadows adds visual dynamism and highlights the intention to foster an open and collaborative environment inside.
+      </p>
+    </aside>
+
+    <div class="mural">
+      <div class="img-wrapper">
+        <img src="bocconi planta.webp" alt="Bocconi 1" data-description="Aerial view showing the floor plan of the Bocconi building" />
+      </div>
+      <div class="img-wrapper">
+        <img src="bocconi fachada.jpg" alt="Bocconi 2" data-description="Main façade with play of light and shadows" />
+      </div>
+      <div class="img-wrapper">
+        <img src="BOCCONI SI.jpg" alt="Bocconi 3" data-description="Analysis of form and movement" />
+      </div>
+      <div class="img-wrapper">
+        <img src="fachadaboconni.jpg" alt="Bocconi 3" data-description="Detail of the geometry of the façade" />
+      </div>
+      <div class="img-wrapper">
+        <img src="interiorbocconi.jpg" alt="Bocconi 3" data-description="View from the interior, importance of the curves" />
+      </div>
+       <div class="img-wrapper">
+        <img src="curvasboccni.jpg" alt="Bocconi 3" data-description="Junction of curved façades" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para texto descriptivo -->
+  <div id="modalText" class="modal-text-container">
+    <div id="textContent" class="modal-text"></div>
+  </div>
+
+  <!-- Modal para imagen grande -->
+  <div id="modalImgContainer" class="modal-img-container">
+    <span id="closeImgBtn" class="close">&times;</span>
+    <img id="modalImg" class="modal-content" />
+  </div>
+  <!-- Botón para volver atrás -->
+<button id="backButton" onclick="history.back()" title="Go Back">⟵</button>
+
+</body>
+</html>

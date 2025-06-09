@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalle - Bocconi</title>
+  <link rel="stylesheet" href="detalle.css" />
+  <script defer src="detalle.js"></script>
+</head>
+<body>
+  <div class="detalle-container">
+    <aside class="descripcion">
+      <h2>Casa Piedra</h2>
+      <p>
+        This stone house, designed by architect Emilio Tuñón, features a sober and contemporary design with a pure, cubic volume and traditional masonry walls. With clean lines and a flat roof, it blends harmoniously into the natural landscape through the use of local materials and deep-set openings that frame the light. Its aesthetic combines rural tradition with an essential, timeless architectural language.
+      </p>
+    </aside>
+
+    <div class="mural">
+      <div class="img-wrapper">
+        <img src="casa piedra.jpeg" alt="Bocconi 1" data-description="Side view with pool" />
+      </div>
+      <div class="img-wrapper">
+        <img src="fachasdapiedra.webp" alt="Bocconi 2" data-description="Façade view, depth" />
+      </div>
+      <div class="img-wrapper">
+        <img src="laminapiedra.jpg" alt="Bocconi 3" data-description="Analysis of floor plan and layout, geometry" />
+      </div>
+      <div class="img-wrapper">
+        <img src="casapiedra2.webp" alt="Bocconi 3" data-description="Rear view, garage, interplay of levels with the terrain" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para texto descriptivo -->
+  <div id="modalText" class="modal-text-container">
+    <div id="textContent" class="modal-text"></div>
+  </div>
+
+ <!-- Modal para imagen grande -->
+  <div id="modalImgContainer" class="modal-img-container">
+    <span id="closeImgBtn" class="close">&times;</span>
+    <img id="modalImg" class="modal-content" />
+  </div>
+    <!-- Botón para volver atrás -->
+<button id="backButton" onclick="history.back()" title="Go Back">⟵</button>
+
+</body>
+</html>

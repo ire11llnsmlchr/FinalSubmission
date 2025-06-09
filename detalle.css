@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 100vh;
+  /* ✅ Cambio aquí: permite scroll */
+  overflow: auto;
+}
+
+.detalle-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Barra lateral */
+.descripcion {
+  width: 220px;
+  padding: 0 15px;
+  background-color: transparent;
+  border-right: 1px solid #444;
+  height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 10%;
+}
+
+/* Galería tipo mural */
+.mural {
+  flex: 1;
+  height: auto;
+  padding: 120px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  scroll-snap-type: y mandatory;
+}
+
+.img-wrapper {
+  width: 80vw;
+  max-width: 1000px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  z-index: 10;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Imagen específica más grande */
+.mural .img-wrapper:nth-child(3) img {
+  max-width: 1200px;
+}
+
+/* Modal texto descriptivo */
+.modal-text-container {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 0 20px white;
+  z-index: 20000;
+  font-size: 1rem;
+  line-height: 1.4;
+  display: none;
+  pointer-events: none;
+}
+
+/* Modal imagen grande */
+.modal-img-container {
+  display: none;
+  position: fixed;
+  z-index: 30000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.95);
+  cursor: zoom-out;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+/* Botón cerrar */
+.close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  z-index: 31000;
+}
+
+/* Botón volver atrás */
+#backButton {
+  position: fixed;
+  left: 15px;
+  top: 5%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#backButton:hover {
+  background-color: #333;
+  color: white;
+}
+/* Espacio extra al final para permitir que la última imagen se muestre correctamente */
+.mural::after {
+  content: "";
+  display: block;
+  height: 100vh;
+  flex-shrink: 0;
+}

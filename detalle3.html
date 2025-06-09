@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalle - Bocconi</title>
+  <link rel="stylesheet" href="detalle.css" />
+  <script defer src="detalle.js"></script>
+</head>
+<body>
+  <div class="detalle-container">
+    <aside class="descripcion">
+      <h2>Casa Ladrillo</h2>
+      <p>
+        Brick House in Madrid, designed by Tuñón y Albornoz Arquitectos, is a single-family home that stands out for its geometric simplicity, artisanal use of brick, and careful integration with the surrounding landscape. It consists of pure volumes — a main cubic block with two floors and a secondary linear volume housing the garage. The house blends tradition and modernity, using local materials such as exposed brick and granite stone, and is organized around patios and gardens that engage in a dialogue with the natural setting of El Pardo.
+      </p>
+    </aside>
+
+    <div class="mural">
+      <div class="img-wrapper">
+        <img src="casa ladrillo.jpg" alt="Ladrillo 1" data-description="Rear view" />
+      </div>
+      <div class="img-wrapper">
+        <img src="fachadaladrillo.webp" alt="Ladrillo 2" data-description="Front view" />
+      </div>
+      <div class="img-wrapper">
+        <img src="laminaladrillop (1).jpg" alt="Ladrillo 3" data-description="Analysis of floor plan and layout, geometry" />
+      </div>
+      <div class="img-wrapper">
+        <img src="cassaladrillo.webp" alt="Ladrillo 3" data-description="Perspective, geometry" />
+      </div>
+      <div class="img-wrapper">
+        <img src="ladrillovent.jpg" alt="Ladrillo 3" data-description="Geometry" />
+      </div>
+      <div class="img-wrapper">
+        <img src="ladrillocontrast.jpg" alt="Ladrillo 3" data-description="Contrast" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para texto descriptivo -->
+  <div id="modalText" class="modal-text-container">
+    <div id="textContent" class="modal-text"></div>
+  </div>
+
+ <!-- Modal para imagen grande -->
+  <div id="modalImgContainer" class="modal-img-container">
+    <span id="closeImgBtn" class="close">&times;</span>
+    <img id="modalImg" class="modal-content" />
+  </div>
+    <!-- Botón para volver atrás -->
+<button id="backButton" onclick="history.back()" title="Go Back">⟵</button>
+
+</body>
+</html>

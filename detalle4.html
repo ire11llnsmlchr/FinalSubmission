@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalle - Acuarelas</title>
+  <link rel="stylesheet" href="detalle.css" />
+  <script defer src="detalle.js"></script>
+</head>
+<body>
+  <div class="detalle-container">
+    <aside class="descripcion">
+      <h2>Acuarelas</h2>
+      <p>
+        Series of watercolors in which, starting from scratch, I have tried to explore depth, movement, and fluidity through various inspirational landscapes. I have played with color contrasts and incorporated other materials besides watercolor, such as acrylics and chalk. These are experimental pieces.
+
+      </p>
+    </aside>
+
+    <div class="mural">
+      <div class="img-wrapper">
+        <img src="foto1.jpg" alt="foto1" />
+      </div>
+      <div class="img-wrapper">
+        <img src="foto 2.jpg" alt="foto2" />
+      </div>
+      <div class="img-wrapper">
+        <img src="foto 3.jpg" alt="foto3" />
+      </div>
+      <div class="img-wrapper">
+        <img src="foto 4.jpg" alt="foto4"  />
+      </div>
+      <div class="img-wrapper">
+        <img src="foto 5.jpg" alt="foto5"  />
+      </div>
+      <div class="img-wrapper">
+        <img src="foto 6.jpg" alt="foto6"  />
+      </div>
+      <!-- Espacio adicional para que la última imagen tenga margen -->
+      <div class="spacer"></div>
+    </div>
+  </div>
+
+  <!-- Modal para imagen grande -->
+  <div id="modalImgContainer" class="modal-img-container">
+    <span id="closeImgBtn" class="close">&times;</span>
+    <img id="modalImg" class="modal-content" />
+  </div>
+
+  <!-- Botón para volver atrás -->
+  <button id="backButton" onclick="history.back()" title="Go Back">⟵</button>
+</body>
+</html>
